@@ -1,0 +1,651 @@
+Last login: Wed Oct 10 17:25:25 on ttys000
+******** +     ~
+brew install postgresql
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/cask and homebrew/core).
+==> New Formulae
+c-blosc             libcerf             objfw               rke
+==> Updated Formulae
+highlight ✔                              libphonenumber
+libepoxy ✔                               librealsense
+apache-spark                             libvirt
+app-engine-java                          meson
+arangodb                                 micronaut
+ark                                      mkdocs
+autopep8                                 mkvtoolnix
+aws-elasticbeanstalk                     mscgen
+awscli                                   mupdf
+bento4                                   mupdf-tools
+blink1                                   ne
+carthage                                 nexus
+cheat                                    nomad
+checkbashisms                            orc-tools
+circleci                                 pandoc-citeproc
+cloc                                     passpie
+conan                                    php-code-sniffer
+convox                                   phpunit
+cvs2svn                                  picat
+elm-format                               pipenv
+embulk                                   proselint
+exercism                                 remarshal
+flatbuffers                              roswell
+fn                                       rustup-init
+futhark                                  sbt
+fzf                                      softhsm
+git                                      swiftgen
+git-annex                                teleport
+git-standup                              terraform-docs
+grip                                     terragrunt
+hledger                                  texmath
+hmmer                                    tinc
+hugo                                     topgrade
+hyperfine                                unrar
+ipv6calc                                 wireguard-tools
+jbake                                    x265
+jenkins                                  yamllint
+jhipster                                 ykman
+juju                                     zenity
+kubernetes-service-catalog-client        zstd
+libheif
+==> Deleted Formulae
+hachoir-metadata           queequeg                   sickbeard
+
+==> Installing dependencies for postgresql: icu4c and readline
+==> Installing postgresql dependency: icu4c
+==> Downloading https://homebrew.bintray.com/bottles/icu4c-62.1.sierra.bottle.ta
+######################################################################## 100.0%
+==> Pouring icu4c-62.1.sierra.bottle.tar.gz
+==> Caveats
+icu4c is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides libicucore.dylib (but nothing else).
+
+If you need to have icu4c first in your PATH run:
+  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.bash_profile
+  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.bash_profile
+
+For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+For pkg-config to find icu4c you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/icu4c/62.1: 250 files, 67.3MB
+==> Installing postgresql dependency: readline
+==> Downloading https://homebrew.bintray.com/bottles/readline-7.0.5.sierra.bottl
+######################################################################## 100.0%
+==> Pouring readline-7.0.5.sierra.bottle.tar.gz
+==> Caveats
+readline is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides the BSD libedit library, which shadows libreadline.
+In order to prevent conflicts when programs look for libreadline we are
+defaulting this GNU Readline installation to keg-only.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/usr/local/opt/readline/lib"
+  export CPPFLAGS="-I/usr/local/opt/readline/include"
+
+==> Summary
+🍺  /usr/local/Cellar/readline/7.0.5: 46 files, 1.5MB
+==> Installing postgresql
+==> Downloading https://homebrew.bintray.com/bottles/postgresql-10.5.sierra.bott
+######################################################################## 100.0%
+==> Pouring postgresql-10.5.sierra.bottle.1.tar.gz
+==> /usr/local/Cellar/postgresql/10.5/bin/initdb /usr/local/var/postgres
+==> Caveats
+To migrate existing data from a previous major version of PostgreSQL run:
+  brew postgresql-upgrade-database
+
+To have launchd start postgresql now and restart at login:
+  brew services start postgresql
+Or, if you don't want/need a background service you can just run:
+  pg_ctl -D /usr/local/var/postgres start
+==> Summary
+🍺  /usr/local/Cellar/postgresql/10.5: 3,395 files, 39.6MB
+==> Caveats
+==> icu4c
+icu4c is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides libicucore.dylib (but nothing else).
+
+If you need to have icu4c first in your PATH run:
+  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.bash_profile
+  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.bash_profile
+
+For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+For pkg-config to find icu4c you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+
+==> readline
+readline is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides the BSD libedit library, which shadows libreadline.
+In order to prevent conflicts when programs look for libreadline we are
+defaulting this GNU Readline installation to keg-only.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/usr/local/opt/readline/lib"
+  export CPPFLAGS="-I/usr/local/opt/readline/include"
+
+==> postgresql
+To migrate existing data from a previous major version of PostgreSQL run:
+  brew postgresql-upgrade-database
+
+To have launchd start postgresql now and restart at login:
+  brew services start postgresql
+Or, if you don't want/need a background service you can just run:
+  pg_ctl -D /usr/local/var/postgres start
+******** +     ~
+brew services start postgresql
+==> Tapping homebrew/services
+Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-services'...
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 14 (delta 0), reused 9 (delta 0), pack-reused 0
+Unpacking objects: 100% (14/14), done.
+Tapped 1 command (43 files, 55.7KB).
+==> Successfully started `postgresql` (label: homebrew.mxcl.postgresql)
+******** +     ~
+pg_isready
+/tmp:5432 - accepting connections
+******** +     ~
+echo "--database=postgresql" >> ~/.railsrc
+******** +     ~
+echo "--skip-coffee" >> ~/.railsrc
+******** +     ~
+echo "--skip-turbolinks" >> ~/.railsrc
+******** +     ~
+echo "--skip-test" >> ~/.railsrc
+******** +     ~
+echo "--skip-spring" >> ~/.railsrc
+******** +     ~
+ls
+Actualize/              Movies/                 composer.phar*
+Applications/           Music/                  iCloud Drive (Archive)/
+Desktop/                Pictures/               my-favorite-things/
+Documents/              Public/                 node_modules/
+Downloads/              Settings/
+Library/                bin/
+******** +     ~
+ls -a
+./                      .distlib/               .sshterm/
+../                     .filezilla/             .subversion/
+.CFUserTextEncoding     .gem/                   .viminfo
+.DS_Store               .gitconfig              Actualize/
+.FontForge/             .gstreamer-0.10/        Applications/
+.Trash/                 .inputrc                Desktop/
+.Xauthority             .itmstransporter/       Documents/
+.adobe/                 .mysql_history          Downloads/
+.atom/                  .node-gyp/              Library/
+.bash_history           .npm/                   Movies/
+.bash_profile           .pearrc                 Music/
+.bash_sessions/         .phpbrew/               Pictures/
+.bundle/                .putty/                 Public/
+.cache/                 .railsrc                Settings/
+.composer/              .rbenv/                 bin/
+.config/                .rnd                    composer.phar*
+.cups/                  .rubocop.yml            iCloud Drive (Archive)/
+.dbk_info               .screenrc               my-favorite-things/
+.designer/              .ssh/                   node_modules/
+******** +     ~
+cd Actualize/
+******** +     Actualize
+rails new contacts_app
+Using --database=postgresql --skip-coffee --skip-turbolinks --skip-test --skip-spring from /Users/h/.railsrc
+      create  
+      create  README.md
+      create  Rakefile
+      create  .ruby-version
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+         run  git init from "."
+Initialized empty Git repository in /Users/h/Actualize/contacts_app/.git/
+      create  package.json
+      create  app
+      create  app/assets/config/manifest.js
+      create  app/assets/javascripts/application.js
+      create  app/assets/javascripts/cable.js
+      create  app/assets/stylesheets/application.css
+      create  app/channels/application_cable/channel.rb
+      create  app/channels/application_cable/connection.rb
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/jobs/application_job.rb
+      create  app/mailers/application_mailer.rb
+      create  app/models/application_record.rb
+      create  app/views/layouts/application.html.erb
+      create  app/views/layouts/mailer.html.erb
+      create  app/views/layouts/mailer.text.erb
+      create  app/assets/images/.keep
+      create  app/assets/javascripts/channels
+      create  app/assets/javascripts/channels/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  bin/update
+      create  bin/yarn
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/cable.yml
+      create  config/puma.rb
+      create  config/storage.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/application_controller_renderer.rb
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/content_security_policy.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/cors.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/new_framework_defaults_5_2.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/master.key
+      append  .gitignore
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/apple-touch-icon-precomposed.png
+      create  public/apple-touch-icon.png
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp
+      create  tmp/.keep
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor
+      create  vendor/.keep
+      create  storage
+      create  storage/.keep
+      create  tmp/storage
+      create  tmp/storage/.keep
+      remove  config/initializers/cors.rb
+      remove  config/initializers/new_framework_defaults_5_2.rb
+         run  bundle install
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/.........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.3.1
+Using concurrent-ruby 1.0.5
+Using i18n 1.1.0
+Using minitest 5.11.3
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Using activesupport 5.2.1
+Using builder 3.2.3
+Using erubi 1.7.1
+Using mini_portile2 2.3.0
+Using nokogiri 1.8.5
+Using rails-dom-testing 2.0.3
+Using crass 1.0.4
+Using loofah 2.2.2
+Using rails-html-sanitizer 1.0.4
+Using actionview 5.2.1
+Using rack 2.0.5
+Using rack-test 1.1.0
+Using actionpack 5.2.1
+Using nio4r 2.3.1
+Using websocket-extensions 0.1.3
+Using websocket-driver 0.7.0
+Using actioncable 5.2.1
+Using globalid 0.4.1
+Using activejob 5.2.1
+Using mini_mime 1.0.1
+Using mail 2.7.0
+Using actionmailer 5.2.1
+Using activemodel 5.2.1
+Using arel 9.0.0
+Using activerecord 5.2.1
+Using mimemagic 0.3.2
+Using marcel 0.3.3
+Using activestorage 5.2.1
+Using bindex 0.5.0
+Using msgpack 1.2.4
+Using bootsnap 1.3.2
+Using bundler 1.16.6
+Using byebug 10.0.2
+Using execjs 2.7.0
+Using ffi 1.9.25
+Using multi_json 1.13.1
+Using jbuilder 2.7.0
+Using rb-fsevent 0.10.3
+Using rb-inotify 0.9.10
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Using method_source 0.9.0
+Fetching pg 1.1.3
+Installing pg 1.1.3 with native extensions
+Using puma 3.12.0
+Using thor 0.20.0
+Using railties 5.2.1
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Using rails 5.2.1
+Using sass-listen 4.0.0
+Using sass 3.6.0
+Using tilt 2.0.8
+Using sass-rails 5.0.7
+Using uglifier 4.1.19
+Using web-console 3.7.0
+Bundle complete! 11 Gemfile dependencies, 61 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+******** +     Actualize
+rails db:create
+Usage:
+  rails new APP_PATH [options]
+
+Options:
+      [--skip-namespace], [--no-skip-namespace]            # Skip namespace (affects only isolated applications)
+  -r, [--ruby=PATH]                                        # Path to the Ruby binary of your choice
+                                                           # Default: /Users/h/.rbenv/versions/2.5.1/bin/ruby
+  -m, [--template=TEMPLATE]                                # Path to some application template (can be a filesystem path or URL)
+  -d, [--database=DATABASE]                                # Preconfigure for selected database (options: mysql/postgresql/sqlite3/oracle/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+                                                           # Default: sqlite3
+      [--skip-yarn], [--no-skip-yarn]                      # Don't use Yarn for managing JavaScript dependencies
+      [--skip-gemfile], [--no-skip-gemfile]                # Don't create a Gemfile
+  -G, [--skip-git], [--no-skip-git]                        # Skip .gitignore file
+      [--skip-keeps], [--no-skip-keeps]                    # Skip source control .keep files
+  -M, [--skip-action-mailer], [--no-skip-action-mailer]    # Skip Action Mailer files
+  -O, [--skip-active-record], [--no-skip-active-record]    # Skip Active Record files
+      [--skip-active-storage], [--no-skip-active-storage]  # Skip Active Storage files
+  -P, [--skip-puma], [--no-skip-puma]                      # Skip Puma related files
+  -C, [--skip-action-cable], [--no-skip-action-cable]      # Skip Action Cable files
+  -S, [--skip-sprockets], [--no-skip-sprockets]            # Skip Sprockets files
+      [--skip-spring], [--no-skip-spring]                  # Don't install Spring application preloader
+      [--skip-listen], [--no-skip-listen]                  # Don't generate configuration that depends on the listen gem
+      [--skip-coffee], [--no-skip-coffee]                  # Don't use CoffeeScript
+  -J, [--skip-javascript], [--no-skip-javascript]          # Skip JavaScript files
+      [--skip-turbolinks], [--no-skip-turbolinks]          # Skip turbolinks gem
+  -T, [--skip-test], [--no-skip-test]                      # Skip test files
+      [--skip-system-test], [--no-skip-system-test]        # Skip system test files
+      [--skip-bootsnap], [--no-skip-bootsnap]              # Skip bootsnap gem
+      [--dev], [--no-dev]                                  # Setup the application with Gemfile pointing to your Rails checkout
+      [--edge], [--no-edge]                                # Setup the application with Gemfile pointing to Rails repository
+      [--rc=RC]                                            # Path to file containing extra configuration options for rails command
+      [--no-rc], [--no-no-rc]                              # Skip loading of extra configuration options from .railsrc file
+      [--api], [--no-api]                                  # Preconfigure smaller stack for API only apps
+  -B, [--skip-bundle], [--no-skip-bundle]                  # Don't run bundle install
+      [--webpack=WEBPACK]                                  # Preconfigure for app-like JavaScript with Webpack (options: react/vue/angular/elm/stimulus)
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Rails options:
+  -h, [--help], [--no-help]        # Show this help message and quit
+  -v, [--version], [--no-version]  # Show Rails version number and quit
+
+Description:
+    The 'rails new' command creates a new Rails application with a default
+    directory structure and configuration at the path you specify.
+
+    You can specify extra command-line arguments to be used every time
+    'rails new' runs in the .railsrc configuration file in your home directory.
+
+    Note that the arguments specified in the .railsrc file don't affect the
+    defaults values shown above in this help message.
+
+Example:
+    rails new ~/Code/Ruby/weblog
+
+    This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
+******** +     Actualize
+cd contacts_app/
+******** +     contacts_app
+rails db:create
+Created database 'contacts_app_development'
+Created database 'contacts_app_test'
+******** +     contacts_app
+rails generate model contact first_name:string last_name:string email:string phone_number:string
+      invoke  active_record
+      create    db/migrate/20181011005242_create_contacts.rb
+      create    app/models/contact.rb
+******** +     contacts_app
+rails db:migrate
+== 20181011005242 CreateContacts: migrating ===================================
+-- create_table(:contacts)
+   -> 0.0179s
+== 20181011005242 CreateContacts: migrated (0.0180s) ==========================
+
+******** +     contacts_app
+rails console
+Loading development environment (Rails 5.2.1)
+irb(main):001:0> jenny = Contact.new({first_name: “Jenny”, last_name: “Jenny”, email: "jenny@jenny.com", phone_number: "867-5309"})
+Traceback (most recent call last):
+        1: from (irb):1
+NameError (undefined local variable or method `“Jenny”' for main:Object)
+Did you mean?  jenny
+irb(main):002:0> exit
+******** +     contacts_app
+rails generate controller api/contacts
+      create  app/controllers/api/contacts_controller.rb
+      invoke  erb
+      create    app/views/api/contacts
+      invoke  helper
+      create    app/helpers/api/contacts_helper.rb
+      invoke  assets
+      invoke    js
+      create      app/assets/javascripts/api/contacts.js
+      invoke    scss
+      create      app/assets/stylesheets/api/contacts.scss
+******** +     contacts_app
+rails console
+Loading development environment (Rails 5.2.1)
+irb(main):001:0> contact = Contact.new({first_name: “Jenny”, last_name: “Jenny”, email: "jenny@jenny.com", phone_number: "867-5309"})
+Traceback (most recent call last):
+        1: from (irb):1
+NameError (undefined local variable or method `“Jenny”' for main:Object)
+irb(main):002:0> jenny = Contact.new({first_name: "Jenny", last_name: "Jenny", email: "jenny@jenny.com", phone_number:"867-5309"})
+=> #<Contact id: nil, first_name: "Jenny", last_name: "Jenny", email: "jenny@jenny.com", phone_number: "867-5309", created_at: nil, updated_at: nil>
+irb(main):003:0> sir = Contact.new({first_name: "Sir", last_name: "Mix-A-Lot", email: "sir@mix-a-lot.com", phone_number: "1-900-MIXALOT"})
+=> #<Contact id: nil, first_name: "Sir", last_name: "Mix-A-Lot", email: "sir@mix-a-lot.com", phone_number: "1-900-MIXALOT", created_at: nil, updated_at: nil>
+irb(main):004:0> pete = Contact.new({first_name: "Dr. Peter", last_name: "Venkman", email: "Venkman@ghostbusters.com", phone_number: "555-2368"})
+=> #<Contact id: nil, first_name: "Dr. Peter", last_name: "Venkman", email: "Venkman@ghostbusters.com", phone_number: "555-2368", created_at: nil, updated_at: nil>
+irb(main):005:0> jenny.save
+   (0.3ms)  BEGIN
+  Contact Create (1.0ms)  INSERT INTO "contacts" ("first_name", "last_name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "Jenny"], ["last_name", "Jenny"], ["email", "jenny@jenny.com"], ["phone_number", "867-5309"], ["created_at", "2018-10-11 01:29:56.431945"], ["updated_at", "2018-10-11 01:29:56.431945"]]
+   (4.1ms)  COMMIT
+=> true
+irb(main):006:0> sir.save
+   (0.2ms)  BEGIN
+  Contact Create (0.6ms)  INSERT INTO "contacts" ("first_name", "last_name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "Sir"], ["last_name", "Mix-A-Lot"], ["email", "sir@mix-a-lot.com"], ["phone_number", "1-900-MIXALOT"], ["created_at", "2018-10-11 01:30:04.519241"], ["updated_at", "2018-10-11 01:30:04.519241"]]
+   (4.5ms)  COMMIT
+=> true
+irb(main):007:0> pete.save
+   (0.2ms)  BEGIN
+  Contact Create (0.5ms)  INSERT INTO "contacts" ("first_name", "last_name", "email", "phone_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["first_name", "Dr. Peter"], ["last_name", "Venkman"], ["email", "Venkman@ghostbusters.com"], ["phone_number", "555-2368"], ["created_at", "2018-10-11 01:30:15.674237"], ["updated_at", "2018-10-11 01:30:15.674237"]]
+   (0.5ms)  COMMIT
+=> true
+irb(main):008:0> exit
+******** +     contacts_app
+subl .
+******** +     contacts_app
+rails server
+=> Booting Puma
+=> Rails 5.2.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.0 (ruby 2.5.1-p57), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/api/first_contact" for 127.0.0.1 at 2018-10-10 20:58:20 -0500
+   (0.5ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /Users/h/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Api::ContactsController#first_contact as HTML
+  Contact Load (0.6ms)  SELECT  "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT $1  [["LIMIT", 1]]
+  ↳ app/controllers/api/contacts_controller.rb:4
+  Rendering api/contacts/first_contact.json.jbuilder
+  Rendered api/contacts/first_contact.json.jbuilder (97.9ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `Contact' for #<#<Class:0x00007fa966649ad0>:0x00007fa96663a5d0>
+Did you mean?  concat):
+    1: json.First Contact @first_contact
+  
+app/views/api/contacts/first_contact.json.jbuilder:1:in `_app_views_api_contacts_first_contact_json_jbuilder___1041789399366474377_70182771935360'
+app/controllers/api/contacts_controller.rb:5:in `first_contact'
+Started GET "/api/first_contact" for 127.0.0.1 at 2018-10-10 20:59:11 -0500
+Processing by Api::ContactsController#first_contact as HTML
+  Contact Load (0.7ms)  SELECT  "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT $1  [["LIMIT", 1]]
+  ↳ app/controllers/api/contacts_controller.rb:4
+  Rendering api/contacts/first_contact.json.jbuilder
+  Rendered api/contacts/first_contact.json.jbuilder (13.3ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/first_contact" for 127.0.0.1 at 2018-10-10 21:00:02 -0500
+Processing by Api::ContactsController#first_contact as HTML
+  Contact Load (0.4ms)  SELECT  "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT $1  [["LIMIT", 1]]
+  ↳ app/controllers/api/contacts_controller.rb:4
+  Rendering api/contacts/first_contact.json.jbuilder
+  Rendered api/contacts/first_contact.json.jbuilder (98.5ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `Contact' for #<#<Class:0x00007fa966649ad0>:0x00007fa966590fd0>
+Did you mean?  concat):
+    1: json.First Contact @first_contact
+  
+app/views/api/contacts/first_contact.json.jbuilder:1:in `_app_views_api_contacts_first_contact_json_jbuilder___1041789399366474377_70182771683360'
+app/controllers/api/contacts_controller.rb:5:in `first_contact'
+Started GET "/api/first_contact" for 127.0.0.1 at 2018-10-10 21:07:00 -0500
+Processing by Api::ContactsController#first_contact as HTML
+  Contact Load (0.7ms)  SELECT  "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT $1  [["LIMIT", 1]]
+  ↳ app/controllers/api/contacts_controller.rb:4
+  Rendering api/contacts/first_contact.json.jbuilder
+  Rendered api/contacts/first_contact.json.jbuilder (0.6ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/all_contacts" for 127.0.0.1 at 2018-10-10 21:26:25 -0500
+Processing by Api::ContactsController#all_contacts as HTML
+  Rendering api/contacts/all_contacts.json.jbuilder
+  Contact Load (0.4ms)  SELECT "contacts".* FROM "contacts"
+  ↳ app/views/api/contacts/all_contacts.json.jbuilder:2
+  Rendered api/contacts/all_contacts.json.jbuilder (15.1ms)
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/all_first_names" for 127.0.0.1 at 2018-10-10 21:28:06 -0500
+  
+AbstractController::ActionNotFound (The action 'all_first-names' could not be found for Api::ContactsController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/all_first_names" for 127.0.0.1 at 2018-10-10 21:28:27 -0500
+Processing by Api::ContactsController#all_first_names as HTML
+  Rendering api/contacts/all_contacts.json.jbuilder
+  Rendered api/contacts/all_contacts.json.jbuilder (0.4ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/all_full_names" for 127.0.0.1 at 2018-10-10 21:37:24 -0500
+Processing by Api::ContactsController#all_full_names as HTML
+  Rendering api/contacts/all_full_names.json.jbuilder
+  Contact Load (0.7ms)  SELECT "contacts".* FROM "contacts"
+  ↳ app/views/api/contacts/all_full_names.json.jbuilder:1
+  Rendered api/contacts/all_full_names.json.jbuilder (14.5ms)
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/all_contacts" for 127.0.0.1 at 2018-10-10 21:44:27 -0500
+Processing by Api::ContactsController#all_contacts as HTML
+  Rendering api/contacts/all_contacts.json.jbuilder
+  Contact Load (0.7ms)  SELECT "contacts".* FROM "contacts"
+  ↳ app/views/api/contacts/all_contacts.json.jbuilder:2
+  Rendered api/contacts/all_contacts.json.jbuilder (2.3ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.7ms)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-10-10 21:45:37 -0500 ===
+- Goodbye!
+Exiting
+******** +     contacts_app
+

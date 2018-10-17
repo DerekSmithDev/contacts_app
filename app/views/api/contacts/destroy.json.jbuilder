@@ -1,0 +1,1 @@
+json.Contact_Destroyed @contact.id
