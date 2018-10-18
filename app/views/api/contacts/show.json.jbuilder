@@ -1,1 +1,1 @@
-json.partial! "_contacts.json.jbuilder", contact: @contact
+json.partial! "contact.json.jbuilder", contact: @contact
