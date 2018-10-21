@@ -35,8 +35,11 @@ class Api::ContactsController < ApplicationController
     @contact.bio = params["bio"] || @contact.bio
     @contact.email = params["email"] || @contact.email
     @contact.phone_number = params["phone_number"] || @contact.phone_number
-    @contact.save
-    render "show.json.jbuilder"
+    if @contact.save
+      render "show.json.jbuilder"
+    else
+      render json: {errors: @contact.errors.full_messages}, status: 422
+    end
   end
   def destroy
     @contact = Contact.find_by(id: params["id"])
