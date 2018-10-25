@@ -1,4 +1,5 @@
 class Api::ContactsController < ApplicationController
+  before_action :authenticate_user
 
   def index
     @contacts = Contact.all
@@ -6,7 +7,12 @@ class Api::ContactsController < ApplicationController
     if first_name
       @contacts = @contacts.where("first_name ILIKE ?", "#{first_name}")
     end
-    render "index.json.jbuilder"
+    if current_user
+      @contacts = current_user.contacts
+      render "index.json.jbuilder"
+    else
+      render json: []
+    end
   end
   def create
     @contact = Contact.new(

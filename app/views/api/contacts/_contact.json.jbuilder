@@ -8,3 +8,4 @@ json.email contact.email
 json.phone_number contact.phone_number
 json.updated_at contact.friendly_updated_at
 json.created_at contact.friendly_created_at
+#json.current_user current_user.contacts
