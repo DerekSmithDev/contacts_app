@@ -21,7 +21,8 @@ class Api::ContactsController < ApplicationController
       last_name: params["last_name"],
       bio: params["bio"],
       email: params["email"],
-      phone_number: params["phone_number"]
+      phone_number: params["phone_number"],
+      user_id: params["current_user"]
       )
     if @contact.save
       render "show.json.jbuilder"
